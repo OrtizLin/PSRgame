@@ -1,26 +1,103 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PSRgame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fL5-mb-RCT">
+                                <rect key="frame" x="17.5" y="192" width="285" height="96"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bG-KU-rd3">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="96"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                        <state key="normal" title="✋🏻"/>
+                                        <connections>
+                                            <action selector="choicePaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t2l-Az-efC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBc-aN-OwX">
+                                        <rect key="frame" x="105" y="0.0" width="75" height="96"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                        <state key="normal" title="✌🏻"/>
+                                        <connections>
+                                            <action selector="choiceScissors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xbJ-qs-55Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWU-Rm-Aa9">
+                                        <rect key="frame" x="210" y="0.0" width="75" height="96"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                        <state key="normal" title="✊🏻"/>
+                                        <connections>
+                                            <action selector="choiceRock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mcg-aC-Z2u"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choice one to play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kc-Uw-SLu">
+                                <rect key="frame" x="73.5" y="130.5" width="173" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤖" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGM-Kh-exT">
+                                <rect key="frame" x="122.5" y="14.5" width="75" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib6-nU-fFA">
+                                <rect key="frame" x="111" y="339.5" width="98" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Next game">
+                                    <color key="titleColor" red="0.02346177558" green="0.72965916450000001" blue="0.103523556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8aK-bT-JQ8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ib6-nU-fFA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="117.5" id="72m-eL-Als"/>
+                            <constraint firstItem="fL5-mb-RCT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BBn-YZ-yRw"/>
+                            <constraint firstItem="ib6-nU-fFA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i8x-Ae-N2R"/>
+                            <constraint firstItem="fL5-mb-RCT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jFu-iR-C6c"/>
+                            <constraint firstItem="8Kc-Uw-SLu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-97.5" id="kty-cL-O1R"/>
+                            <constraint firstItem="uGM-Kh-exT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pEc-vZ-YaO"/>
+                            <constraint firstItem="uGM-Kh-exT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-183.5" id="tLp-Eo-ZE3"/>
+                            <constraint firstItem="8Kc-Uw-SLu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vcW-g6-e1M"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgound" destination="8bC-Xf-vdC" id="1Kw-Jg-88r"/>
+                        <outlet property="nextGameButton" destination="ib6-nU-fFA" id="3Zy-Gx-L0I"/>
+                        <outlet property="paperButton" destination="0bG-KU-rd3" id="RmT-P6-nsi"/>
+                        <outlet property="resultSign" destination="8Kc-Uw-SLu" id="w4P-Ce-dGt"/>
+                        <outlet property="robotReact" destination="uGM-Kh-exT" id="gus-cs-mDR"/>
+                        <outlet property="rockButton" destination="CWU-Rm-Aa9" id="53T-2a-gXj"/>
+                        <outlet property="scissorsButton" destination="PBc-aN-OwX" id="xYD-LY-UGi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="134.48275862068968"/>
         </scene>
     </scenes>
 </document>
