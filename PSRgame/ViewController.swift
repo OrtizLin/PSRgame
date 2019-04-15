@@ -28,13 +28,12 @@ class ViewController: UIViewController {
  
     
     @IBOutlet var backgound: UIView!
-    @IBOutlet weak var nextGameButton: UIButton!
     
+    @IBOutlet weak var nextGameButton: UIButton!
     @IBOutlet weak var rockButton: UIButton!
     @IBOutlet weak var scissorsButton: UIButton!
     @IBOutlet weak var paperButton: UIButton!
     @IBOutlet weak var robotReact: UILabel!
-
     @IBOutlet weak var resultSign: UILabel!
     
     @IBAction func choicePaper(_ sender: Any) {
